@@ -1,0 +1,35 @@
+#espace {
+    margin: 12.8rem 0;
+    @include media(768px) { 
+        margin: 6.4rem 0 3.2rem;
+    }
+    .container-content {
+        margin-top: 3.2rem;
+        @extend .grid-columns;
+        gap: 6.4rem;
+        @include media(768px)  {
+            gap: 3.2rem;
+            margin-top: 2rem;
+        }
+
+        .img-banner-espace {
+            img {
+                border-radius: .6rem;
+            }
+        }
+        
+        p + p {
+            margin-top: 2rem;
+            @include media(768px) {
+                margin-top: 1.4rem;
+            }
+        }
+
+        a.button {
+            margin-top: 3.2rem;
+            @include media(768px) {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

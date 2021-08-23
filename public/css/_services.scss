@@ -1,0 +1,45 @@
+#services {
+    background: $bg-sections;
+    .services-item {
+        @extend .grid-columns;
+
+        .content {
+            max-width: 70%;
+            margin: 0 auto;
+            @include media(768px) {
+                max-width: 80%;
+            }
+            @include media(425px) {
+                padding: 4.8rem 0 6.4rem;
+                text-align: center;
+            }
+
+            align-self: center;
+
+            p {
+                @include font('18');
+                color: $text-color;
+                margin-bottom: 4.2rem;
+
+                @include media(768px) {
+                    @include font('16')
+                }
+
+                strong {
+                    color: $green-button;
+                    font-weight: 600;
+                }
+            }
+
+            a.button {
+                padding: 1.6rem 3.2rem;
+            }
+        }
+
+        .image {
+            @include media(425px) {
+                grid-row: 1;
+            }
+        }
+    }
+}

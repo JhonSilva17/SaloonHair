@@ -1,0 +1,58 @@
+#hero {
+    display: grid;
+
+    grid-template-columns: 60% 40%;
+
+    @include media(425px) {
+        grid-template-columns: auto;
+    }
+    .hero-content {       
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        padding-top: 6.4rem;
+
+        @include media(425px) {
+            padding: 12.8rem 0 8rem; 
+            text-align: center;
+        }
+   
+        .container-content {
+            max-width: 66%;
+            margin: 0 auto;
+            @include media(768px) {
+                max-width: 85%;
+            }
+
+            h1 {
+                @include font('56');
+                color: $white;
+                @include media(768px) {
+                    @include font('28')
+                }
+            }
+
+            p {
+                color: $white;
+                max-width: 80%;
+                margin: 1.6rem 0 4.8rem;
+                @include media(768px) {
+                    @include font('14');
+                    margin: 1.6rem auto 4.8rem;
+                }
+                @include media(425px) {
+                    margin-bottom: 3.2rem;
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        background-color: $primary-color;
+        padding: 20rem 0 0;
+
+        @include media(425px) {
+            display: none;
+        }
+    }
+}
