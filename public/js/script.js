@@ -4,7 +4,7 @@ const hero = document.querySelector("#hero")
 
 function surgirMenu() {
     const medidasHero = hero.getBoundingClientRect().bottom
-    if (medidasHero < 0) {
+    if (medidasHero < 15) {
         header.classList.add('ativo')
     } else {
         header.classList.remove('ativo')
