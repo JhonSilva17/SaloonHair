@@ -11,7 +11,6 @@ function surgirMenu() {
     }
 }
 
-
 // Menu
 const icons = document.querySelectorAll('.icon')
 const links = document.querySelectorAll('nav a')
@@ -28,6 +27,17 @@ links.forEach(item => {
   })
 })
 
+// Botão para scroll
+function surgirButtonScrollTop() {
+  const windowTop = window.pageYOffset
+  const scrollTopButton = document.querySelector(".scroll-top")
+
+  if (windowTop > 100) {
+    scrollTopButton.classList.add('ativo')
+  } else {
+    scrollTopButton.classList.remove('ativo')
+  }
+}
 
 /* SCROLL REVEAL */
 const scrollReveal = ScrollReveal({
@@ -78,5 +88,6 @@ new Glider(simpleCarousel, {
 });
 
 window.addEventListener("scroll", function() {
-  surgirMenu()
+  surgirMenu(),
+  surgirButtonScrollTop()
 })
